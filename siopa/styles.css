@@ -1,0 +1,52 @@
+#help {
+	position fixed;
+	top:0;
+	right:0;
+}
+
+html,body,head {
+	margin:0;
+	padding:0;
+}
+
+input.user {
+	text-transform: lowercase !important;
+}
+
+.beta {
+	color:#3498db;
+	font-size:25px;
+	font-family: monospace !important;
+	position:fixed;
+	bottom:0px;
+	right:2px;
+}
+
+.jumbotron {
+	background-color: transparent !important;
+}
+
+.vertical-center {
+  height:100%;
+  width:100%;
+
+  text-align: center;  /* align the inline(-block) elements horizontally */
+  font: 0/0 a;         /* remove the gap between inline(-block) elements */
+}
+
+.vertical-center:before {    /* create a full-height inline block pseudo=element */
+  content: " ";
+  display: inline-block;
+  vertical-align: bottom;    /* vertical alignment of the inline element */
+  height: 100%;
+}
+
+.vertical-center > .container {
+  max-width: 100%;
+
+  display: inline-block;
+  vertical-align: bottom;  /* vertical alignment of the inline element */
+                           /* reset the font property */
+  font: 16px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+

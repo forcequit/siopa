@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<meta charset='UTF-8'>
+	<title>Siopa </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+	<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+	<link rel="stylesheet" href="styles.css"/>
+
+<style>	
+	.white, .white a {
+  color: white
+}
+</style>
+
+<body>
+	<div class="container list-group text-center">
+		<h3 class="list-group-item" style="background-color:rgb(44, 62, 80);color:white;">
+			<a href="//siopa.io"  style="color:white; text-decoration:none;">
+				<i class="fa fa-users white pull-left"></i>
+			</a>
+
+			<b>Siopa FAQ</b> 
+
+			<a href="//twitter.com/siopaio" style="color:white; text-decoration:none;">
+				<i class="fa fa-twitter white pull-right"></i>
+			</a>
+		</h3>
+		<br>		
+		<div style="text-align:left;padding-left:10px;">
+			<h2>Frequently Asked Questions
+			</h2>
+			<hr>				
+			<h3>Why is this different?</h3>
+			<h5>When shopping we often need to consult a family member at home.  Siopa.io is real-time so there is no more back and forth texting or calling.  If someone at home adds an item to your shopping list it will appear on your shopping list as you shop. Siopa is more fun when you are both using the list at the same time!</h5>
+			<h3>How to choose a list name?</h3>
+			<h5>Use a unique list name to share with your family or team.  Only the family members or team that you share with will have access to the list.</h5>
+			<h3>How to share the list with my family?</h3>
+			<h5>Press the share button <span class="glyphicon glyphicon-share"></span> on your browser and send using email or sms.<br>
+				The link should look like this:<br>
+				 <code>http://siopa.io/app.html?u=siopalist</code>
+			</h5>			
+			<h3>How to save the list to my phone?</h3>
+			<h5>Press the share button <span class="glyphicon glyphicon-share"></span> on your browser
+				and click<br> <code>add to Home Screen</code></h5>			
+			<h3>How to add an item?</h3>
+			<h5>Type your item into the box at the top of the page then press the green <b>+</b> button.</h5>			
+			<h3>How to mark an item as bought?</h3>
+			<h5>As you purchase each item click the green tick to mark the item as bought.<br>
+				This item will now drop down to the bought section.
+			</h5>			
+			<h3>How to buy an already bought item?</h3>
+			<h5>Items in your bought section will appear with a green shopping-cart button to the left-hand side.  Click this button to add the item back onto the shopping list. </h5>			
+			<h3>How to delete an already bought item?</h3>
+			<h5>Items in your bought section will also appear with a red trash button to the right-hand side. Click this button to delete the item.</h5>			
+			<h3>How to contact us?</h3>
+			<h5>
+				<a href="mailto:support@siopa.io">support@siopa.io</a>
+			</h5>
+			<h3>How to share feedback publicly</h3>
+			<h5>We have our own public siopa list you can share your comments on <a href="http://siopa.io/app.html?u=siopafeedback" target=_blank>@siopafeedback</h5>
+		</div>		
+	</div>
+	<span class="beta">beta</span>
+	<script>
+		function go(){
+		var data = document.getElementById("link").value;
+		data.toLowerCase();
+		if(data != "") {
+			document.getElementById("linkbtn").href = "http://adambyrne.net/shopper/app.html?u=" + data;
+			}
+		}
+	</script>
+</body>
+</html>

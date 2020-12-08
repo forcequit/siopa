@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<meta charset='UTF-8'>
+	<title>Siopa</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+	<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+	<link rel="stylesheet" href="styles.css"/>
+
+<body>
+<div class="jumbotron vertical-center">
+<div class="container">
+	<div class="container list-group text-center">
+		<h3 class="list-group-item" style="background-color:rgb(44, 62, 80);color:white;">
+			<a href="//siopa.io"  style="color:white; text-decoration:none;">
+				<i class="fa fa-users white pull-left"></i>
+			</a>
+
+			<b>Siopa</b> 
+
+			<a href="//siopa.io/faq.html" style="color:white; text-decoration:none;">
+				<span class="glyphicon glyphicon-info-sign pull-right"></span>
+			</a>
+		</h3>
+
+		<br>
+
+		<div class="input-group">
+			<input type="text" class="input form-control input-lg user" id="link" placeholder="Name your list!"/>
+			<span class="input-group-btn">
+				<a id="linkbtn">
+					<button class="btn btn-lg btn-success pull-right" onclick="go()">
+						<b>Go</b>
+					</button>
+				</a>
+			</span>
+		</div>	
+	</div>	
+</div>
+</div>
+	<span class="beta">beta</span>	 
+	<script>
+		function go(){
+			var data = document.getElementById("link").value;
+			var udata = data.toLowerCase();
+			edata = udata.split(" ").join("");
+			if(data != "") {
+				document.getElementById("linkbtn").href = "//siopa.io/app.html?u=" + edata;
+			}	
+			}
+			
+
+	</script>
+
+</body>
+</html>
