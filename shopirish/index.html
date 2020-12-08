@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="shop">
+
+
+<head>
+<title>Shop Irish ☘</title>
+
+<meta charset='UTF-8'>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="title" 			content="Shop Irish, Buy Local ☘">
+	<meta name="description" 	content="Search for anything by product, location or keyword">
+	<meta name="keywords" 		content="#shoplocal #shopirish #buyirish #justbuyirish irishcrafts irishart irishgoods">
+	<meta property="og:image" 		content="https://siopa.io/shopirish/shopirish.png">
+	<meta property="twitter:image" 			content="https://siopa.io/shopirish/shopirish.png">	
+
+  
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
+<script src="https://cdn.firebase.com/libs/angularfire/1.0.0/angularfire.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+<script async src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+<link rel="stylesheet" href="ie.css">
+
+</head>
+
+<style>
+
+.e {
+white-space: nowrap!important;
+overflow: hidden!important;
+text-overflow: ellipsis!important;
+}
+
+.hand:hover {
+cursor: pointer;
+}
+.f {
+word-wrap: break-word;
+}
+
+</style>
+
+<span id="title2"></span>
+<span id="title" class=hide>Shopify</span> 
+
+<body ng-controller="shopController">
+
+<div class="container list-group">
+
+<h3 class="list-group-item text-left" style="background-color:rgb(44, 62, 80);color:white;">
+
+<b>Shop Irish</b> 
+
+<span title="Submit your store">
+	<a data-toggle="modal" data-target="#-about" style="color:white; text-decoration:none;">
+		<span class="hand glyphicon glyphicon-info-sign pull-right"></span>
+	</a>
+</span>
+</h3>
+
+<h2>
+</h2>
+
+<form class="list-group-item">
+		<input type="text" class="form-control form-control-block input-lg" ng-model="newItem.name" placeholder="Search for anything: product, location, keyword">
+</form>
+	
+
+
+<div class="e list-group-item text-left" ng-repeat="item in items | filter:newItem.name" ng-hide="{{item.bought == true}}">
+
+	<img title={{item.$id}} src=https://www.google.com/s2/favicons?domain={{item.url}}>
+	
+	<span title={{item.description}}>{{item.url}}</span>
+	
+<a href={{item.url}}?utm_source=siopa.io/shopirish&utm_term={{newItem.name}} target=blank title={{item.title}} class="btn btn-success btn-xm pull-right">
+		<span class="glyphicon glyphicon-link pull-right"></span>	
+	</a>
+
+</div>
+
+</div>
+        
+<!-- Begin modal -->
+<div id="-about" class="modal fade" role="dialog"><div class="modal-dialog modal-lg"><div class="modal-content">
+
+	<div class="modal-header" style="background-color:#34495e";>
+		<button type="button" class="close" data-dismiss="modal" style="color:white;">x</button>
+		<h4 class="modal-title text-center" style="color:white;">Shop Irish</h4>
+	</div>
+
+	<div class="modal-body">
+	
+		<p class=lead>
+			900+ Irish makers with online stores.
+		</p>
+		
+		<p class=lead>
+			Use Product, location or keywords to search this list.  Latest ShoppersView survey shows that shoppers want to purchase locally online, so mention your local area in the Keywords.  Shoppers No 1 concerns are Delivery & Shipping terms so make this front & central in the description.
+		</p>
+	
+		<p class=lead>
+			Some of the listings fall short in terms of getting found. If you are the site owner,  check that the site meta tags reflect the words shoppers use to search.		
+		</p>
+	
+		<p>
+		<pre>
+		<code>
+			<img src=meta.png class=img-responsive width=90%>
+		</code>
+		</pre>
+		</p>
+		
+		<p>
+			<a class="btn btn-large btn-default" href="https://forms.gle/Xh7gEn6d82Q6By9R9" target=_blank title="">Update or add my listing</a>   
+		</p>
+
+		<p>
+			<a class="btn btn-large btn-default" href="https://www.linkedin.com/post-inspector/" target=_blank title="">Meta tag checker</a>   
+		</p>
+
+		<p>
+			<a class="btn btn-large btn-default" href="https://sensorpro.net/shoppersview" target=_blank title="">ShoppersView report</a>   
+		</p>
+
+		<p>
+			<a class="btn btn-large btn-default" href="https://sensorpro.net/ecommerce" target=_blank title="">Ecommerce tips by Sensorpro</a>   
+		</p>
+	
+	</div>
+
+	<div class="modal-footer">
+		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	</div>
+
+</div></div></div>
+<!-- End modal -->
+
+</body>
+
+	<script src="shopirish.js?t=1"></script>
+</html>
