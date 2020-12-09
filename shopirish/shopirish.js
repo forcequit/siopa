@@ -1,7 +1,5 @@
 var app = angular.module("shop", ["firebase"]);
-var shop = "https://crackling-torch-1335.firebaseio.com/"  + getParameterByName('u');
-var shop = "https://shopify-cb8ec.firebaseio.com/"  + "null";
-var shop = "https://tech4c19.firebaseio.com/" + "null";
+var shop = "https://x.firebaseio.com/" + "null";
 
 var u = getParameterByName('u');
 var p = getParameterByName('p');
